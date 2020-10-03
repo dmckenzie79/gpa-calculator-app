@@ -23,10 +23,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [SignInGuard]
       }
     ],
-    canActivate: [SignInGuard]
+
   },
   {
     path: 'session',
